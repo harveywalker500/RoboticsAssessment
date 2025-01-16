@@ -16,9 +16,10 @@ trap terminate_processes SIGINT SIGTERM
 cd ~/Robotics/
 colcon build
 source install/setup.bash
+export TURTLEBOT3_MODEL=waffle
 
 # Run gazebo
-ros2 launch CoffeeBot assessment.launch.py &
+ros2 launch navigation_demos assessment.launch.py &
 gzserver_pid=$!
 
 ros2 launch navigation_demos nav_demo.launch.py &
