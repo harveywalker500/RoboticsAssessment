@@ -9,19 +9,23 @@ from launch.substitutions import LaunchConfiguration
 
 
 def generate_launch_description():
+    # Get the launch directory
     launch_file_dir = os.path.join(get_package_share_directory('turtlebot3_gazebo'), 'launch')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
 
+    # Define the launch configuration variables
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     x_pose = LaunchConfiguration('x_pose', default='7.286720')
     y_pose = LaunchConfiguration('y_pose', default='-1.598053')
 
+    # Get the path to the world file
     world = os.path.join(
         get_package_share_directory('CoffeeBot'),
         'worlds',
         'coffeeShop.world'
     )
 
+    # Create the launch description and populate for gazebo server
     gzserver_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')
@@ -29,12 +33,14 @@ def generate_launch_description():
         launch_arguments={'world': world}.items()
     )
 
+    # Create the launch description and populate for gazebo client
     gzclient_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
         )
     )
 
+    # Create the launch description and populate for robot state publisher
     robot_state_publisher_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_file_dir, 'robot_state_publisher.launch.py')
@@ -42,6 +48,7 @@ def generate_launch_description():
         launch_arguments={'use_sim_time': use_sim_time}.items()
     )
 
+    # Create the launch description and populate for spawning the turtlebot
     spawn_turtlebot_cmd = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(launch_file_dir, 'spawn_turtlebot3.launch.py')
@@ -52,6 +59,7 @@ def generate_launch_description():
         }.items()
     )
 
+    # Create the launch description
     ld = LaunchDescription()
 
     # Add the commands to the launch description

@@ -3,6 +3,8 @@ planner_server:
     expected_planner_frequency: 20.0
     use_sim_time: True
     planner_plugins: ["GridBased"]
+
+    # GridBased planner plugin
     GridBased:
       plugin: "nav2_navfn_planner/NavfnPlanner"
       tolerance: 0.5
@@ -24,6 +26,8 @@ global_costmap:
       track_unknown_space: true
       always_send_full_costmap: True
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
+
+      # Layer parameters
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
         enabled: True
@@ -39,6 +43,7 @@ global_costmap:
           obstacle_max_range: 2.5
           obstacle_min_range: 0.0
 
+      # Layer parameters
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: True

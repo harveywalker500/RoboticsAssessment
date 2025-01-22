@@ -27,9 +27,6 @@ def generate_launch_description():
     config_planner = PathJoinSubstitution([pkg_nav_demos, 'config', 'planner.yaml'])
     config_controller = PathJoinSubstitution([pkg_nav_demos, 'config', 'controller.yaml'])
 
-    # Define nav_to_pose behaviour tree
-    bt_xml_navtopose_file = PathJoinSubstitution([pkg_nav_demos, 'behavior_tree_xml', 'coffee_delivery_tree.xml'])
-
     # Include SLAM Toolbox standard launch file
     launch_slamtoolbox = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([get_package_share_directory('slam_toolbox'), '/launch', '/online_async_launch.py']),
