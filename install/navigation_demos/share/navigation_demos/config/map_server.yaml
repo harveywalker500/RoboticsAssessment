@@ -1,0 +1,6 @@
+map_server:
+  ros__parameters:
+    yaml_filename: "../maps/CoffeeShop.yaml"
+    topic_name: "map_server"
+    frame_id: "map"
+    use_sim_time: true

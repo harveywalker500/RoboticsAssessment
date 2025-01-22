@@ -1,0 +1,6 @@
+source;share/CoffeeBot/hook/pythonpath.ps1
+source;share/CoffeeBot/hook/pythonpath.dsv
+source;share/CoffeeBot/hook/pythonpath.sh
+source;share/CoffeeBot/hook/ament_prefix_path.ps1
+source;share/CoffeeBot/hook/ament_prefix_path.dsv
+source;share/CoffeeBot/hook/ament_prefix_path.sh

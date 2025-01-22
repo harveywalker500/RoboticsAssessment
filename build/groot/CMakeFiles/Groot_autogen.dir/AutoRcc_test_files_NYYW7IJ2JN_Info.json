@@ -1,0 +1,32 @@
+{
+	"BUILD_DIR" : "/root/Robotics/build/groot/Groot_autogen",
+	"CMAKE_BINARY_DIR" : "/root/Robotics/build/groot",
+	"CMAKE_CURRENT_BINARY_DIR" : "/root/Robotics/build/groot",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/root/Robotics/src/Groot",
+	"CMAKE_SOURCE_DIR" : "/root/Robotics/src/Groot",
+	"INCLUDE_DIR" : "/root/Robotics/build/groot/Groot_autogen/include",
+	"INPUTS" : 
+	[
+		"/root/Robotics/src/Groot/test_data/crossdoor_trace.fbl",
+		"/root/Robotics/src/Groot/test_data/subtree_test_fail.xml",
+		"/root/Robotics/src/Groot/test_data/crossdoor_with_subtree.xml",
+		"/root/Robotics/src/Groot/test_data/test_xml_key_reordering_issue.xml",
+		"/root/Robotics/src/Groot/test_data/SystemSkillTest.skills.json",
+		"/root/Robotics/src/Groot/test_data/simple_without_model.xml",
+		"/root/Robotics/src/Groot/test_data/test_subtrees_issue_8.xml",
+		"/root/Robotics/src/Groot/test_data/issue_24.xml",
+		"/root/Robotics/src/Groot/test_data/crossdoor_palette.xml",
+		"/root/Robotics/src/Groot/test_data/show_all.xml",
+		"/root/Robotics/src/Groot/test_data/issue_3.xml"
+	],
+	"LOCK_FILE" : "/root/Robotics/build/groot/CMakeFiles/Groot_autogen.dir/AutoRcc_test_files_NYYW7IJ2JN_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "test_files" ],
+	"OUTPUT_CHECKSUM" : "NYYW7IJ2JN",
+	"OUTPUT_NAME" : "qrc_test_files.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt5/bin/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/root/Robotics/build/groot/CMakeFiles/Groot_autogen.dir/AutoRcc_test_files_NYYW7IJ2JN_Used.txt",
+	"SOURCE" : "/root/Robotics/src/Groot/test_data/test_files.qrc",
+	"VERBOSITY" : 0
+}
